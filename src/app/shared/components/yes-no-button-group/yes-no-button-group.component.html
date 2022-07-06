@@ -8,6 +8,7 @@ class="button-group"
   <label [attr.id]="id" class="label">{{ label }}</label>
   <button
   appKmItem
+  (focused)="activate(options.YES)"
   role="radio"
   [attr.aria-checked]="value === options.YES"
   [attr.tabindex]="value === options.YES ? 0 : -1"
@@ -19,6 +20,7 @@ class="button-group"
   </button>
   <button
   appKmItem
+  (focused)="activate(options.NO)"
   role="radio"
   [attr.aria-checked]="value === options.NO"
   [attr.tabindex]="value === options.NO ? 0 : -1"
